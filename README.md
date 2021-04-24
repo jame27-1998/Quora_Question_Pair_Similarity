@@ -111,6 +111,20 @@ token_set_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.
 
 longest_substr_ratio : Ratio of length longest common substring to min lenghth of token count of Q1 and Q2 <br>
 longest_substr_ratio = len(longest common substring) / (min(len(q1_tokens), len(q2_tokens)) <br>
+
+<h6> Featurizing Text Data</h6>
+<br>
+Tf-idf weighted word2vec
+</br>
+<h6>Machine Learning models</h6>
+</br>
+1.Random model , testloss =0.887242646958</br>
+2.Logistic Regression with hyperpararmeter tuning, testloss=0.520035530431</br>
+3.Linear SVM with hyperparameter tuning ,test loss= 0.489669093534</br>
+4.Xgboost , testloss= 0.357054433715</br>
+
+<h3> Conclusion</h3>
+Given data is  imbalance data with 63.08% not similar and  39.02% similar. Taking logloss as a metric to measure perfomance of the model is a wrong idea because even a dumb model can have an logloss of 0.88. So we plot  , precision matrix and recall matrix, and also plot connfusion matrix to clearly understand about performance of model.From the results obtained Xgboost model performs better here.
      
 
 
