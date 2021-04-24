@@ -33,12 +33,84 @@
       11.freq_q1-freq_q2 = absolute difference of frequency of qid1 and qid2 </br>
       <hr>
       <h3>Preprocessing of Text</h3>
-       1 Preprocessing:
-Removing html tags
-Removing Punctuations
-Performing stemming
-Removing Stopwords
-Expanding contractions etc.
+        1.Removing html tags</br>
+        2.Removing Punctuations </br>
+        3.Performing stemming</br>
+        4.Removing Stopwords</br>
+        5.Expanding contractions etc. </br>
+        <hr>
+        <h3>Advanced Feature Extraction (NLP and Fuzzy Features) </h3>
+        Few Terminology:
+
+Token: You get a token by splitting sentence a space </br>
+Stop_Word : stop words as per NLTK. </br>
+Word : A token that is not a stop_word</br></br>
+Features:
+<br>
+cwc_min : Ratio of common_word_count to min lenghth of word count of Q1 and Q2 <br>
+cwc_min = common_word_count / (min(len(q1_words), len(q2_words)) <br>
+
+
+
+cwc_max : Ratio of common_word_count to max lenghth of word count of Q1 and Q2 <br>
+cwc_max = common_word_count / (max(len(q1_words), len(q2_words)) <br>
+
+
+
+csc_min : Ratio of common_stop_count to min lenghth of stop count of Q1 and Q2
+csc_min = common_stop_count / (min(len(q1_stops), len(q2_stops))
+
+
+
+csc_max : Ratio of common_stop_count to max lenghth of stop count of Q1 and Q2 <br>
+csc_max = common_stop_count / (max(len(q1_stops), len(q2_stops)) <br>
+
+
+
+ctc_min : Ratio of common_token_count to min lenghth of token count of Q1 and Q2 <br>
+ctc_min = common_token_count / (min(len(q1_tokens), len(q2_tokens)) <br>
+
+
+
+ctc_max : Ratio of common_token_count to max lenghth of token count of Q1 and Q2
+ctc_max = common_token_count / (max(len(q1_tokens), len(q2_tokens))
+
+
+
+last_word_eq : Check if First word of both questions is equal or not <br>
+last_word_eq = int(q1_tokens[-1] == q2_tokens[-1]) <br>
+
+
+
+first_word_eq : Check if First word of both questions is equal or not <br>
+first_word_eq = int(q1_tokens[0] == q2_tokens[0]) <br>
+
+
+
+abs_len_diff : Abs. length difference <br>
+abs_len_diff = abs(len(q1_tokens) - len(q2_tokens)) <br> 
+
+
+
+mean_len : Average Token Length of both Questions <br>
+mean_len = (len(q1_tokens) + len(q2_tokens))/2 <br>
+
+
+
+fuzz_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/ <br>
+
+
+
+fuzz_partial_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/ <br>
+
+
+
+token_sort_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/ <br>
+ 
+token_set_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/ <br>
+
+longest_substr_ratio : Ratio of length longest common substring to min lenghth of token count of Q1 and Q2 <br>
+longest_substr_ratio = len(longest common substring) / (min(len(q1_tokens), len(q2_tokens)) <br>
      
 
 
