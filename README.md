@@ -112,11 +112,11 @@ token_set_ratio : https://github.com/seatgeek/fuzzywuzzy#usage http://chairnerd.
 longest_substr_ratio : Ratio of length longest common substring to min lenghth of token count of Q1 and Q2 <br>
 longest_substr_ratio = len(longest common substring) / (min(len(q1_tokens), len(q2_tokens)) <br>
 
-<h6> Featurizing Text Data</h6>
+<h3> Featurizing Text Data</h3>
 <br>
 Tf-idf weighted word2vec
 </br>
-<h6>Machine Learning models</h6>
+<h3>Machine Learning models</h3>
 </br>
 1.Random model , testloss =0.887242646958</br>
 2.Logistic Regression with hyperpararmeter tuning, testloss=0.520035530431</br>
